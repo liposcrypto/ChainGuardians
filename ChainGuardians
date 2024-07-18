@@ -1,0 +1,23 @@
+# scripts/analytics.py
+
+import pandas as pd
+
+def analyze_blockchain_metrics(data):
+    # Perform analytics on blockchain metrics
+    # Example: Calculate statistics
+    active_cryptos = data['data']['active_cryptocurrencies']
+    markets = data['data']['markets']
+    total_market_cap = data['data']['total_market_cap_usd']
+    total_volume = data['data']['total_volume_usd']
+    
+    metrics = {
+        'Active Cryptocurrencies': active_cryptos,
+        'Markets': markets,
+        'Total Market Cap (USD)': total_market_cap,
+        'Total Volume (USD)': total_volume
+    }
+    return metrics
+
+# Example usage:
+# metrics = analyze_blockchain_metrics(blockchain_data)
+# print(metrics)
